@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador KND</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" href="./imagenes/KND-logo.webp">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <div class=" container">
+        <header class=header>
+            <div class="img">
+                <img src="./imagenes/KND-logo.webp" alt="logo KND">
+            </div>
+        </header>
+
+        <main class= "main">
+            <section class="TxtEncriptado">
+                <div class="textarea">
+                    <textarea 
+                    id="Encriptado" cols="30" rows="10"  placeholder="Ingrese su texto aquí" 
+                    onkeypress="return soloMinusculas(event)"></textarea>
+                </div>
+                <div class="aviso">
+                    <img src="./imagenes/aviso.svg" alt="icono de aviso">
+                    <span id="msg">Solo letras minúsculas y sin acentos</span>
+                </div>
+                <div class="btn-ED">
+                    <button id="btn-Encriptar"alt="botón Encriptar" onclick=encriptar()> Encriptar</button>
+                    <button id="btn-Desencriptar"alt="botón Desencriptar"onclick=desencriptar()> Desencriptar</button>
+                </div>
+
+            </section>
+
+            <section class="TxtDesencriptado">
+                <div class="textarea2">
+                    <textarea id="Desencriptado" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="IMG5">
+                    <img src="./imagenes/KND-5.webp" class="img5" alt="número 5 KND">
+                </div>
+                <div class="btn-CL">
+                    <button id="btn-Copiar"alt="botón Copiar"onclick=copiar()>Copiar </button>
+                    <button id="btn-Limpiar"alt="botón Limpiar"onclick=limpiar()>Limpiar</button>
+                </div>
+                <div class="contenedor-parrafos">
+                    <p id="parrafo"><strong>Ningún mensaje fue encontrado</strong></p>
+                    <p id="subtitulo">Ingresa el texto que deseas encriptar o desencriptar</p>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <strong>Desarrollado por Carolina Chavez</strong>
+            <div class="iconos-Redes">
+                <a href="https://www.linkedin.com/in/Chavez-DL-Carolina" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/LugaChavez/" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i></a>
+            </div>
+        </footer>
+
+        <script src="./script.js"></script>
+    </div>
+</body>
+</html>

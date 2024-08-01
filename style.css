@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root{
+    --color1:#42eeb5;
+    --color2:#729b94;
+    --color3:#6ba484;
+    --color4:#8fc0b0;
+    --color5:#43635c;
+    --color6:#986c59;
+    --color7:#75513c;
+    --color8:#51523d;
+    --color9:#4a3d29;
+    --fuente-inter:"Inter", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+html,body{
+    /*min-height: 100vh;*/
+    font-style: italic;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+}
+
+/*encabezado*/
+.header{
+    width: 100%;
+    height: 40px;
+    background:linear-gradient(45deg,#42eeb5,#986c59);
+}
+
+.img img{
+    object-fit: cover;
+    width: 110px;
+    height: 110px;
+    position: relative;
+    margin:-18px 30px  160px 18px ;   
+}
+
+/*cuerpo*/
+
+.main{
+    /*main=pantalla-header*/
+    width: 100%;
+    height:100%;
+    background-color: var(--color6);
+    background-image: url(./imagenes/KND-casa.jpeg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* inicia seccion TxtEncriptado*/
+.TxtEncriptado{ 
+    width: 70%;
+    height: auto;
+    background:linear-gradient(45deg,#42eeb5,#986c59);
+    justify-content: center;
+    align-items: center;
+    margin: 1.9em;
+    padding: 0.9em;
+    border-radius: 0.9em; 
+}
+
+/*textareaEncriptado*/
+#Encriptado{
+    width: 90%;
+    height: 250px;
+    font-size: 16px;
+    border-radius:1.25em;
+    padding: 20%;
+    text-align:center;
+    justify-content: center;
+    border:none;
+    outline: none;
+    box-shadow: 0 0 1.25em 0;
+    margin: 5%;
+}
+
+#Encriptado::placeholder {
+    color: var(--color9); /* Color del placeholder */
+    font-size: 20px;
+    font-style: italic; /* Estilo del texto del placeholder */
+    overflow: none;
+}
+
+.aviso{
+    font-size: 0.9em;
+    text-align:center;
+    padding: 0.18em;
+    margin: 0.3em;
+}
+
+/*BOTONES*/
+
+.btn-ED,.btn-CL{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    height: auto;
+}
+
+#btn-Encriptar, #btn-Desencriptar, #btn-Copiar, #btn-Limpiar{
+    width: 100px;
+    height: 50px;
+    margin: 15px;
+    align-items: center;
+    border-radius:0.6em;
+    border:none;
+    background-color: var(--color5);
+    font-size:16px;
+    transition: color 0.3s ease;
+    cursor:pointer;
+}
+
+#btn-Encriptar:hover{
+color: black;
+background-color: var(--color6);
+}
+
+#btn-Desencriptar:hover{
+    color: black;
+    background-color: #42eeb5;
+}
+#btn-Copiar:hover{
+    color: black;
+    background-color: #42eeb5;
+}
+
+#btn-Limpiar:hover{
+    color: black;
+    background-color: var(--color6);   
+}
+/* Finaliza seccion TxtEncriptado*/
+
+/* inicia seccion TxtDesencriptado*/
+.TxtDesencriptado{
+    width: 100%;
+    height: auto;
+    background:linear-gradient(90deg,#42eeb5,#986c59);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 1.9em;
+    padding: 0.9em;
+    border-radius: 0.9em;
+    border: none;
+}
+
+/*textareaDesencriptado*/
+#Desencriptado{
+    width: 80%;
+    height:100px;
+    font-size: 18px;
+    text-align:center ;
+    align-items: center;
+    justify-content: center;
+    border-radius:1.25em;
+    padding: 3%;
+    border:none;
+    box-shadow: 0 0 .25em 0;
+    margin:5px;
+    outline: none;
+}
+
+.IMG5{
+    width: 100%;
+    height:200px; 
+}
+
+.IMG5 .img5 {
+    object-fit: cover;
+    width: 12.5em;
+    height:12.5em;
+    position:relative;
+} 
+
+.contenedor-parrafos{
+    text-align: center;
+}
+
+#parrafo{
+    font-size: 1.12em;
+}
+
+#subtitulo {
+    font-size: 0.9em;
+}
+/* Finaliza seccion TxtDesencriptado*/
+
+/* Pie de pagina */
+footer{
+    width: 100%;
+    height: 40px;
+    background:linear-gradient(45deg,#42eeb5,#986c59);
+    text-align: center;
+    justify-content: center;
+    padding: 1px;
+    font-size: 1.25em; 
+}
+
+.iconos-Redes{
+    display: inline-block;
+    text-align: center;
+    justify-content:space-evenly;
+}
+
+.iconos-Redes a {
+    color:#986c59;
+    font-size: 1.25em; /* Tamaño de los íconos */
+    transition: color 0.5s ease; /* Transición suave al pasar el cursor */
+    margin-top: 20px;
+}
+
+.iconos-Redes a:hover {
+    color: #000;
+}
+
+/*Resposive*/
+
+@media (max-width: 768px) {
+    .main{
+        flex-direction: column;
+        width: auto;
+    }
+
+    .btn-ED,.btn-CL{
+        width: auto;
+        flex-direction: center;
+    }
+
+    .TxtEncriptado{
+        width: 80%; 
+    }
+    .TxtDesencriptado{
+        width:80%; 
+    }
+
+}
+
