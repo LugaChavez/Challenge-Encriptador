@@ -69,7 +69,7 @@ function soloMinusculas(event) {
         return true;
 
     } else {
-        alert ("Ingrese un texto sin mayusculas y sin acentos o caracteres especiales")
+        alert ("Ingrese un texto en minúsculas, sin acentos o caracteres especiales.")
         return false;
     }
 }
